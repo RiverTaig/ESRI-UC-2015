@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ESRI_UC_2015</name>
+    </assembly>
+    <members>
+        <member name="T:ConstructingGeometries.AnalyzeView">
+            <summary>
+            Interaction logic for AnalyzeView.xaml
+            </summary>
+            <summary>
+            AnalyzeView
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.AnalyzeView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.AnalyzeViewModel.Show">
+            <summary>
+            Show the DockPane.
+            </summary>
+        </member>
+        <member name="F:ConstructingGeometries.AnalyzeViewModel._heading">
+            <summary>
+            Text shown near the top of the DockPane.
+            </summary>
+        </member>
+        <member name="P:ConstructingGeometries.AnalyzeViewModel.BurgerButtonTooltip">
+            <summary>
+            Tooltip shown when hovering over the burger button.
+            </summary>
+        </member>
+        <member name="P:ConstructingGeometries.AnalyzeViewModel.BurgerButtonMenu">
+            <summary>
+            Menu shown when burger button is clicked.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.Analyze_ShowButton">
+            <summary>
+            Button implementation to show the DockPane.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.Analyze_MenuButton1">
+            <summary>
+            Button implementation for the button on the menu of the burger button.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.createMultiPoints">
+            <summary>
+            This code sample shows how to build Multipoint objects. 
+            20 random points are generated in the extent of the map extent of the active view.
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.createMultiPoints.constructSampleMultiPoints(ArcGIS.Desktop.Mapping.FeatureLayer)">
+            <summary>
+            Create a single multi-point feature that is comprised of 20 points.
+            </summary>
+            <param name="multiPointLayer">Multi-point geometry feature layer used to add the multi-point feature.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ConstructingGeometries.createPoints">
+            <summary>
+            This code sample shows how to build MapPoint objects. 
+            20 random points are generated in the extent of the map extent of the active view.
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.createPoints.constructSamplePoints(ArcGIS.Desktop.Mapping.FeatureLayer)">
+            <summary>
+            Create random sample points in the extent of the spatial reference
+            </summary>
+            <param name="pointFeatureLayer">Point geometry feature layer used to the generate the points.</param>
+            <returns>Task{bool}</returns>
+        </member>
+        <member name="T:ConstructingGeometries.createPolygons">
+            <summary>
+            This code sample shows how to build Polygon objects. 
+            The code will take line geometries from the line feature layer and construct a polygon from a convex hull for all lines.
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.createPolygons.constructSamplePolygon(ArcGIS.Desktop.Mapping.FeatureLayer,ArcGIS.Desktop.Mapping.FeatureLayer)">
+            <summary>
+            Create sample polygon feature using the point geometries from the multi-point feature using the 
+            ConvexHull method provided by the GeometryEngine.
+            </summary>
+            <param name="polygonLayer">Polygon geometry feature layer used to add the new feature.</param>
+            <param name="lineLayer">The polyline feature layer containing the features used to construct the polygon.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ConstructingGeometries.createPolylines">
+            <summary>
+            This code sample shows how to build Polyline objects. 
+            The code will take point geometries from the point feature layer and construct polylines with 5 vertices each.
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.createPolylines.constructSamplePolylines(ArcGIS.Desktop.Mapping.FeatureLayer,ArcGIS.Desktop.Mapping.FeatureLayer)">
+            <summary>
+            Create sample polyline feature using the geometries from the point feature layer.
+            </summary>
+            <param name="polylineLayer">Polyline geometry feature layer used to add the new features.</param>
+            <param name="pointLayer">The geometries from the point layer are used as vertices for the new line features.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ConstructingGeometries.ConstructingGeometriesModule">
+            <summary>
+            This sample provide four buttons showing the construction of geometry types of type MapPoint, Multipoint, Polyline, and Polygon.
+            </summary>
+            <remarks>
+            1. In Visual Studio click the Build menu. Then select Build Solution.
+            2. Click Start button to open ArcGIS Pro.
+            3. ArcGIS Pro will open.
+            4. Go to the ADD-IN tab
+            5. Click the Setup button to ensure that the appropriate layers are created. The setup code will ensure that we have a layer of type point,
+               multi-point, polyline, and polygon. Once the conditions are meet then the individual buttons will become enabled.
+            6. Step through the buttons to create the various geometry types.
+            </remarks>
+        </member>
+        <member name="M:ConstructingGeometries.ConstructingGeometriesModule.CanUnload">
+            <summary>
+            Called by Framework when ArcGIS Pro is closing
+            </summary>
+            <returns>False to prevent Pro from closing, otherwise True</returns>
+        </member>
+        <member name="M:ConstructingGeometries.ConstructingGeometriesModule.ExecuteCommand(System.String)">
+            <summary>
+            Generic implementation of ExecuteCommand to allow calls to
+            <see cref="M:ArcGIS.Desktop.Framework.FrameworkApplication.ExecuteCommand(System.String)"/> to execute commands in
+            your Module.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ConstructingGeometries.ConstructingGeometriesModule.PrepareTheSample">
+            <summary>
+            The method ensures that there are point, multipoint, line, and polygon layers in the map of the active view.
+            In case the layer is missing, then a default feature class will be created in the default geodatabase of the project.
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.ConstructingGeometriesModule.CreateLayer(System.String,System.String)">
+            <summary>
+            Create a feature class in the default geodatabase of the project.
+            </summary>
+            <param name="featureclassName">Name of the feature class to be created.</param>
+            <param name="featureclassType">Type of feature class to be created. Options are:
+            <list type="bullet">
+            <item>POINT</item>
+            <item>MULTIPOINT</item>
+            <item>POLYLINE</item>
+            <item>POLYGON</item></list></param>
+            <returns></returns>
+        </member>
+        <member name="P:ConstructingGeometries.ConstructingGeometriesModule.Current">
+            <summary>
+            Retrieve the singleton instance to this module here
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.RandomExtension">
+            <summary>
+            Extension methods to generate random coordinates within a given extent.
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.RandomExtension.NextDouble(System.Random,System.Double,System.Double)">
+            <summary>
+            Generate a random double number between the min and max values.
+            </summary>
+            <param name="random">Instance of a random class.</param>
+            <param name="minValue">The min value for the potential range.</param>
+            <param name="maxValue">The max value for the potential range.</param>
+            <returns>Random number between min and max</returns>
+            <remarks>The random result number will always be less than the max number.</remarks>
+        </member>
+        <member name="M:ConstructingGeometries.RandomExtension.NextCoordinate(System.Random,ArcGIS.Core.Geometry.Envelope,System.Boolean)">
+            <summary>
+            /Generate a random coordinate within the provided envelope.
+            </summary>
+            <param name="random">Instance of a random class.</param>
+            <param name="withinThisExtent">Area of interest in which the random coordinate will be created.</param>
+            <param name="is3D">Boolean indicator if the coordinate should be 2D (only x,y values) or 3D (containing x,y,z values).</param>
+            <returns>A coordinate with random values within the extent.</returns>
+        </member>
+        <member name="T:ConstructingGeometries.Dockpane1View">
+            <summary>
+            Interaction logic for Dockpane1View.xaml
+            </summary>
+            <summary>
+            Dockpane1View
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.Dockpane1View.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.Dockpane1ViewModel.Show">
+            <summary>
+            Show the DockPane.
+            </summary>
+        </member>
+        <member name="F:ConstructingGeometries.Dockpane1ViewModel._heading">
+            <summary>
+            Text shown near the top of the DockPane.
+            </summary>
+        </member>
+        <member name="P:ConstructingGeometries.Dockpane1ViewModel.BurgerButtonTooltip">
+            <summary>
+            Tooltip shown when hovering over the burger button.
+            </summary>
+        </member>
+        <member name="P:ConstructingGeometries.Dockpane1ViewModel.BurgerButtonMenu">
+            <summary>
+            Menu shown when burger button is clicked.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.Dockpane1_ShowButton">
+            <summary>
+            Button implementation to show the DockPane.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.Dockpane1_MenuButton">
+            <summary>
+            Button implementation for the button on the menu of the burger button.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.DxCommisionView">
+            <summary>
+            Interaction logic for DxCommisionView.xaml
+            </summary>
+            <summary>
+            DxCommisionView
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.DxCommisionView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ConstructingGeometries.DxCommisionViewModel.Show">
+            <summary>
+            Show the DockPane.
+            </summary>
+        </member>
+        <member name="F:ConstructingGeometries.DxCommisionViewModel._heading">
+            <summary>
+            Text shown near the top of the DockPane.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.DxCommision_ShowButton">
+            <summary>
+            Button implementation to show the DockPane.
+            </summary>
+        </member>
+        <member name="M:SE.ArcGISPro.License.GetLicenses">
+            <summary>
+             Attempts to checkout an ArcEditor and ArcFM license and returns true if successful.
+            </summary>
+        </member>
+        <member name="M:SE.ArcGISPro.License.GetArcGISLicense(ESRI.ArcGIS.esriSystem.esriLicenseProductCode)">
+            <summary>
+             Attempts to checkout a license for the specified ESRI product and returns true if successful.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SE.ArcGISPro.License.GetArcFMLicense(Miner.Interop.mmLicensedProductCode)" -->
+        <member name="M:SE.ArcGISPro.License.ReleaseLicenses">
+            <summary>
+            Releases ArcGIS and ArcFM licenses.
+            </summary>
+        </member>
+        <member name="T:ConstructingGeometries.Setup">
+            <summary>
+            Ensure that the prerequisites for the SDK sample are met and then enable subsequently enabled the buttons to construct the geometries.
+            </summary>
+        </member>
+    </members>
+</doc>

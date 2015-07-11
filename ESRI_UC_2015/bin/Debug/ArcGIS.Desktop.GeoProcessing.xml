@@ -1,0 +1,1930 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGIS.Desktop.GeoProcessing</name>
+    </assembly>
+    <members>
+        <member name="M:ArcGIS.Desktop.Internal.GeoProcessing.Controls.IValueControl.isParameter">
+            <summary>
+            Parameter or Environment
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Internal.GeoProcessing.Controls.IValueControl.Name">
+            <summary>
+            display name
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Internal.GeoProcessing.Controls.IValueControl.Value">
+            <summary>
+            get/set Value as Text
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Internal.GeoProcessing.Controls.ValueControlBase.update_value">
+            <summary>
+            get new value from 'host' and invalidate UI properties
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Internal.GeoProcessing.Controls.ValueControlBase.setValueRaw(System.String)">
+            <summary>
+            assign new string Value without notifying host
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Internal.GeoProcessing.Controls.ValueControlBase._canHandleMDElement">
+            <summary>
+            set false to ignore update and disable control when value reference MD element
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Internal.GeoProcessing.Controls.EventHandlerHelper.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ObjectToValueConverter">
+            <summary>
+            convert .Net object to GP parameter string
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ModelBuilderProgressWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.GeoprocessingProjectItem">
+            <summary>
+            Represents a GeoProcessing project item.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ToolGeneralView">
+            <summary>
+            Interaction logic for ToolGeneralView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ToolGeneralView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ToolParametersView">
+            <summary>
+            Interaction logic for ToolParametersView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ToolParametersView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ToolPasswordView">
+            <summary>
+            Interaction logic for ToolPasswordView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ToolPasswordView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.AddToolboxTitle">
+            <summary>
+              Looks up a localized string similar to Add Toolbox.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.AddToolCommand">
+            <summary>
+              Looks up a localized string similar to Open Another Tool.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.AddToProjectPrompt">
+            <summary>
+              Looks up a localized string similar to Add to Project?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.AnalysisForProLabel">
+            <summary>
+              Looks up a localized string similar to Analyze script and model tools for ArcGIS Pro compatibility.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.AskForPasswordDialogTitle">
+            <summary>
+              Looks up a localized string similar to Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.button_Back">
+            <summary>
+              Looks up a localized string similar to Back.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.button_close">
+            <summary>
+              Looks up a localized string similar to Close.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.button_close_TT">
+            <summary>
+              Looks up a localized string similar to Close.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.CancelButtonText">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.CannotDownloadRasters">
+            <summary>
+              Looks up a localized string similar to This tool works on selected rasters. Use the selection tools to download rasters from the image service..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.CannotDownloadRastersTitle">
+            <summary>
+              Looks up a localized string similar to Select rasters to download.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.CannotOverwriteToolbox">
+            <summary>
+              Looks up a localized string similar to Can not over write project toolbox..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.checkSyntaxButtonText">
+            <summary>
+              Looks up a localized string similar to Check Syntax.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.common_Browse">
+            <summary>
+              Looks up a localized string similar to Browse....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.common_delete_confirmation">
+            <summary>
+              Looks up a localized string similar to Are you sure you want permanently delete this item?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.common_delete_title">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.common_today_at">
+            <summary>
+              Looks up a localized string similar to Today at.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ConfirmCreateNewToolboxPrompt">
+            <summary>
+              Looks up a localized string similar to Confirm Create New Toolbox..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.converter_click_help">
+            <summary>
+              Looks up a localized string similar to Click for more help....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.converter_click_openfile">
+            <summary>
+              Looks up a localized string similar to Open File....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.CreateToolboxFailed">
+            <summary>
+              Looks up a localized string similar to Failed to create new toolbox..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.CreateToolsetFailed">
+            <summary>
+              Looks up a localized string similar to Create Toolset has failed.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DataTypeDialog_Column_Name">
+            <summary>
+              Looks up a localized string similar to _Column Name.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DataTypeDialog_MultiValue">
+            <summary>
+              Looks up a localized string similar to Multiple values.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DataTypeDialog_ValueTable">
+            <summary>
+              Looks up a localized string similar to Table of values.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DatatypeDialogTitle">
+            <summary>
+              Looks up a localized string similar to Parameter Data type.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelAcres">
+            <summary>
+              Looks up a localized string similar to Acres.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelAnnotation">
+            <summary>
+              Looks up a localized string similar to Annotation.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelArealUnits">
+            <summary>
+              Looks up a localized string similar to Areal Units.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelAres">
+            <summary>
+              Looks up a localized string similar to Ares.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelBlob">
+            <summary>
+              Looks up a localized string similar to Blob.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelBoolean">
+            <summary>
+              Looks up a localized string similar to Boolean.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelCentimeters">
+            <summary>
+              Looks up a localized string similar to Centimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelCenturies">
+            <summary>
+              Looks up a localized string similar to Centuries.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDate">
+            <summary>
+              Looks up a localized string similar to Date.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDays">
+            <summary>
+              Looks up a localized string similar to Days.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDecades">
+            <summary>
+              Looks up a localized string similar to Decades.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDecimalDegrees">
+            <summary>
+              Looks up a localized string similar to Decimal Degrees.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDecimeters">
+            <summary>
+              Looks up a localized string similar to Decimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDegrees">
+            <summary>
+              Looks up a localized string similar to Degrees.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDimension">
+            <summary>
+              Looks up a localized string similar to Dimension.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelDouble">
+            <summary>
+              Looks up a localized string similar to Double.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelFeatureClass">
+            <summary>
+              Looks up a localized string similar to Feature Type.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelFeet">
+            <summary>
+              Looks up a localized string similar to Feet.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelField">
+            <summary>
+              Looks up a localized string similar to Field.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelFile">
+            <summary>
+              Looks up a localized string similar to File.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelFileSystem">
+            <summary>
+              Looks up a localized string similar to File System.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelFloat">
+            <summary>
+              Looks up a localized string similar to Float.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelGeometry">
+            <summary>
+              Looks up a localized string similar to Geometry.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelGlobalID">
+            <summary>
+              Looks up a localized string similar to GlobalID.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelGUID">
+            <summary>
+              Looks up a localized string similar to GUID.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelHectares">
+            <summary>
+              Looks up a localized string similar to Hectares.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelHours">
+            <summary>
+              Looks up a localized string similar to Hours.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelInches">
+            <summary>
+              Looks up a localized string similar to Inches.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelKilometers">
+            <summary>
+              Looks up a localized string similar to Kilometers.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelLinearUnits">
+            <summary>
+              Looks up a localized string similar to Linear Units.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelLocalDatabase">
+            <summary>
+              Looks up a localized string similar to Local Database.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelLong">
+            <summary>
+              Looks up a localized string similar to Long.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMeters">
+            <summary>
+              Looks up a localized string similar to Meters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMiles">
+            <summary>
+              Looks up a localized string similar to Miles.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMillimeters">
+            <summary>
+              Looks up a localized string similar to Millimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMilliseconds">
+            <summary>
+              Looks up a localized string similar to Milliseconds.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMinutes">
+            <summary>
+              Looks up a localized string similar to Minutes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMonths">
+            <summary>
+              Looks up a localized string similar to Months.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelMultipoint">
+            <summary>
+              Looks up a localized string similar to Multipoint.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelNauticalMiles">
+            <summary>
+              Looks up a localized string similar to Nautical Miles.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelNone">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelOID">
+            <summary>
+              Looks up a localized string similar to OID.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelPoint">
+            <summary>
+              Looks up a localized string similar to Point.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelPoints">
+            <summary>
+              Looks up a localized string similar to Points.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelPolygon">
+            <summary>
+              Looks up a localized string similar to Polygon.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelPolyline">
+            <summary>
+              Looks up a localized string similar to Polyline.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelRange">
+            <summary>
+              Looks up a localized string similar to Range.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelRaster">
+            <summary>
+              Looks up a localized string similar to Raster.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelRemoteDatabase">
+            <summary>
+              Looks up a localized string similar to Remote Database.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSeconds">
+            <summary>
+              Looks up a localized string similar to Seconds.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelShort">
+            <summary>
+              Looks up a localized string similar to Short.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareCentimeters">
+            <summary>
+              Looks up a localized string similar to Square Centimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareDecimeters">
+            <summary>
+              Looks up a localized string similar to Square Decimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareFeet">
+            <summary>
+              Looks up a localized string similar to Square Feet.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareInches">
+            <summary>
+              Looks up a localized string similar to Square Inches.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareKilometers">
+            <summary>
+              Looks up a localized string similar to Square Kilometers.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareMeters">
+            <summary>
+              Looks up a localized string similar to Square Meters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareMiles">
+            <summary>
+              Looks up a localized string similar to Square Miles.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareMillimeters">
+            <summary>
+              Looks up a localized string similar to Square Millimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelSquareYards">
+            <summary>
+              Looks up a localized string similar to Square Yards.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelText">
+            <summary>
+              Looks up a localized string similar to Text.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelTimeUnits">
+            <summary>
+              Looks up a localized string similar to Time Units.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelUnknown">
+            <summary>
+              Looks up a localized string similar to Unknown.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelValueList">
+            <summary>
+              Looks up a localized string similar to Value List.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelValueTable">
+            <summary>
+              Looks up a localized string similar to Value Table.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelWeeks">
+            <summary>
+              Looks up a localized string similar to Weeks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelWorkspace">
+            <summary>
+              Looks up a localized string similar to Workspace.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelXML">
+            <summary>
+              Looks up a localized string similar to XML.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelYards">
+            <summary>
+              Looks up a localized string similar to Yards.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.DomainFilterLabelYears">
+            <summary>
+              Looks up a localized string similar to Years.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.editPythonToolboxButtonText">
+            <summary>
+              Looks up a localized string similar to Edit Toolbox.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.editTool_script_file_empty">
+            <summary>
+              Looks up a localized string similar to Script file is empty.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.EmptyTabTitle">
+            <summary>
+              Looks up a localized string similar to Tools.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.env_Category">
+            <summary>
+              Looks up a localized string similar to Category: .
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.env_header_Param">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.env_header_Value">
+            <summary>
+              Looks up a localized string similar to Value.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.environmentBurgerBtnText">
+            <summary>
+              Looks up a localized string similar to Show Groups.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ExportScriptDialogTitle">
+            <summary>
+              Looks up a localized string similar to Export Script.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ExportScriptTitle">
+            <summary>
+              Looks up a localized string similar to Export script location.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.FavoritesSeparator">
+            <summary>
+              Looks up a localized string similar to Project.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.FixToolboxPathPrompt">
+             <summary>
+               Looks up a localized string similar to 
+            Would You like to fix the toolbox path?.
+             </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.Gallery_PrimaryGroup">
+            <summary>
+              Looks up a localized string similar to Analysis.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Add_Group">
+            <summary>
+              Looks up a localized string similar to Add Group.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Move_Down">
+            <summary>
+              Looks up a localized string similar to Move Down.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Move_To">
+            <summary>
+              Looks up a localized string similar to Move To ▾.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Move_Up">
+            <summary>
+              Looks up a localized string similar to Move Up.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Rename">
+            <summary>
+              Looks up a localized string similar to Rename.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GalleryCustomize_Title">
+            <summary>
+              Looks up a localized string similar to Customize Analysis Gallery.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GPMessageBoxTitle_Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GPMessageBoxTitle_Message">
+            <summary>
+              Looks up a localized string similar to Message.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GPMessageBoxTitle_Warning">
+            <summary>
+              Looks up a localized string similar to Warning.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GPOptionsTitle">
+            <summary>
+              Looks up a localized string similar to Set options for running geoprocessing tools and scripts..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GPPane_FindTools">
+            <summary>
+              Looks up a localized string similar to Find Tools.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.GPPane_ShowProgress">
+            <summary>
+              Looks up a localized string similar to Clear Progress.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LayerDeleteFieldMsg">
+            <summary>
+              Looks up a localized string similar to Deleting field....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LayerNewSelectionLayerMsg">
+            <summary>
+              Looks up a localized string similar to Creating new layer from selected features....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LayerRemoveJoinMsg">
+            <summary>
+              Looks up a localized string similar to Removing join....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LayerRemoveRelateMsg">
+            <summary>
+              Looks up a localized string similar to Removing relate....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LearnMoreAboutGPOptions">
+            <summary>
+              Looks up a localized string similar to Learn more about geoprocessing options.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LearnMoreAboutScriptTools">
+            <summary>
+              Looks up a localized string similar to Learn more about script tools.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.LogOperationsLabel">
+            <summary>
+              Looks up a localized string similar to Write geoprocessing operations to log file and dataset metadata.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.MaxStatsLabel">
+            <summary>
+              Looks up a localized string similar to Number of recent tools to display.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.MaxThreadsLabel">
+            <summary>
+              Looks up a localized string similar to Concurrency Max.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.model_variables_separator">
+            <summary>
+              Looks up a localized string similar to Model Variables.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelConnectErrorDependent">
+            <summary>
+              Looks up a localized string similar to The input variable is dependent on this process. You cannot connect dependent variables..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelConnectErrorElementTypes">
+            <summary>
+              Looks up a localized string similar to Can only connect a variable to a process..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelConnectErrorNoMatches">
+            <summary>
+              Looks up a localized string similar to The input variable does not meet the input requirements for any of the parameters for this tool..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelConnectErrorNoParameters">
+            <summary>
+              Looks up a localized string similar to There are no parameters to connect..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelConnectFailed">
+            <summary>
+              Looks up a localized string similar to The connection failed..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelCreateElementFailed">
+            <summary>
+              Looks up a localized string similar to Create data element failed for this dataset. This dataset is not supported or may be corrupt..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelExportImage">
+            <summary>
+              Looks up a localized string similar to Export Image.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelExportImageFilter">
+            <summary>
+              Looks up a localized string similar to Diagram File (.png)|*.png.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelExportReport">
+            <summary>
+              Looks up a localized string similar to Export Report.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelExportReportFilter">
+            <summary>
+              Looks up a localized string similar to HTML File (.htm)|*.htm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelExportScript">
+            <summary>
+              Looks up a localized string similar to Export Script.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelExportScriptFilter">
+            <summary>
+              Looks up a localized string similar to Python Script File|*.py.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelHasIterator">
+            <summary>
+              Looks up a localized string similar to The model already has an iterator. Only one iterator may be added to a model..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelLabel">
+            <summary>
+              Looks up a localized string similar to Label.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelNewFailed">
+            <summary>
+              Looks up a localized string similar to Failed to create new model..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelOpenFailed">
+            <summary>
+              Looks up a localized string similar to Failed to open model..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelPasteIteratorFailed">
+            <summary>
+              Looks up a localized string similar to The elements cannot be pasted because this model already contains an iterator. A model may only contain one iterator..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelPrecondition">
+            <summary>
+              Looks up a localized string similar to Precondition.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelRenameElementFailed">
+            <summary>
+              Looks up a localized string similar to This name is already used by another element in the model.  Please enter a unique name..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelSameModel">
+            <summary>
+              Looks up a localized string similar to A model cannot be added to itself..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelSaveAs">
+            <summary>
+              Looks up a localized string similar to Save Model.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.modelTool_PropSheet_Title">
+            <summary>
+              Looks up a localized string similar to Model: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ModelToolParametersLabel">
+            <summary>
+              Looks up a localized string similar to Parameters used by this model..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.OkButtonText">
+            <summary>
+              Looks up a localized string similar to OK.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.OverwriteOutputLabel">
+            <summary>
+              Looks up a localized string similar to Allow geoprocessing tools to overwrite existing datasets.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.param_help_template">
+             <summary>
+               Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+            
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot; /&gt;
+              &lt;style&gt;
+                body
+                {
+                  font-family: Verdana, Gill, Helvetica, Sans-serif;
+                  font-size: 0.8em;
+                  font-weight: 500;
+                  color: #000020;
+                  background-color: #FFFFFF;
+                }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body scroll=&quot;auto&quot; onload=&quot;this.focus()&quot;&gt;&lt;/body&gt;
+            &lt;/html&gt;.
+             </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.param_tooltip_Disabled">
+            <summary>
+              Looks up a localized string similar to (Disabled).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.param_tooltip_ERROR">
+            <summary>
+              Looks up a localized string similar to ERROR.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.param_tooltip_Optional">
+            <summary>
+              Looks up a localized string similar to (Optional).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.param_tooltip_Required">
+            <summary>
+              Looks up a localized string similar to (Required).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.param_tooltip_WARNING">
+            <summary>
+              Looks up a localized string similar to WARNING.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_expand_tooltip">
+            <summary>
+              Looks up a localized string similar to Show or Hide Messages.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_message_pending">
+            <summary>
+              Looks up a localized string similar to Pending....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_message_processing_output">
+            <summary>
+              Looks up a localized string similar to Updating....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_message_running">
+            <summary>
+              Looks up a localized string similar to Running....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_message_task_prepare">
+            <summary>
+              Looks up a localized string similar to Running.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_status_canceling">
+            <summary>
+              Looks up a localized string similar to Canceling....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_status_completed">
+            <summary>
+              Looks up a localized string similar to Completed.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_status_failed">
+            <summary>
+              Looks up a localized string similar to Failed.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_status_running">
+            <summary>
+              Looks up a localized string similar to Running.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.progress_stop_tooltip">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.Project_Tools">
+            <summary>
+              Looks up a localized string similar to Favorites.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorConfirmPassword">
+            <summary>
+              Looks up a localized string similar to _Confirm Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorConfirmPasswordRemoval">
+            <summary>
+              Looks up a localized string similar to Confirm Removal.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorCurrentPassword">
+            <summary>
+              Looks up a localized string similar to Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorExportLocation">
+            <summary>
+              Looks up a localized string similar to Export Location.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorExportPassword">
+            <summary>
+              Looks up a localized string similar to Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorInvalidPassword">
+            <summary>
+              Looks up a localized string similar to Invalid Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PropertyEditorSetPassword">
+            <summary>
+              Looks up a localized string similar to Enter _Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PythonToolbox_SyntaxChecking_msg">
+            <summary>
+              Looks up a localized string similar to Checking syntax ....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.pythonToolboxErrorsTitle">
+            <summary>
+              Looks up a localized string similar to Python Errors.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_BlockMessage">
+            <summary>
+              Looks up a localized string similar to Wait for geoprocessing tool to complete..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_Clear">
+            <summary>
+              Looks up a localized string similar to Clear Window.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_ClearTranscript">
+            <summary>
+              Looks up a localized string similar to Clear Transcript.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_EnterCodeHere">
+            <summary>
+              Looks up a localized string similar to 🐍 Enter Python code here.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_LoadCode">
+            <summary>
+              Looks up a localized string similar to Load Code.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_SaveTranscript">
+            <summary>
+              Looks up a localized string similar to Save Transcript.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.PyWindow_SelectAll">
+            <summary>
+              Looks up a localized string similar to Select All.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.RecentSeparator">
+            <summary>
+              Looks up a localized string similar to Recent.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.RemoveCommand">
+            <summary>
+              Looks up a localized string similar to Remove.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.RemovePasswordDialogTitle">
+            <summary>
+              Looks up a localized string similar to Remove Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ReplaceToolboxPrompt">
+             <summary>
+               Looks up a localized string similar to {0} already exists.
+            Do you want to replace it?.
+             </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SaveModel">
+            <summary>
+              Looks up a localized string similar to Save model?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.scriptEditorDialogTitle">
+            <summary>
+              Looks up a localized string similar to Select your script editor.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptEditorLabel">
+            <summary>
+              Looks up a localized string similar to Script Editor.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolCategoryParamHeader">
+            <summary>
+              Looks up a localized string similar to Category.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolDataTypeParamHeader">
+            <summary>
+              Looks up a localized string similar to Data Type.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolDefaultValueParamHeader">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolDependencyParamHeader">
+            <summary>
+              Looks up a localized string similar to Dependency.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolDirectionParamHeader">
+            <summary>
+              Looks up a localized string similar to Direction.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolEnvironmentParamHeader">
+            <summary>
+              Looks up a localized string similar to Environment.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolFilterParamHeader">
+            <summary>
+              Looks up a localized string similar to Filter.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolGeneralEmbedLabel">
+            <summary>
+              Looks up a localized string similar to Import script.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolGeneralFileLabel">
+            <summary>
+              Looks up a localized string similar to Script File.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolGeneralInProcLabel">
+            <summary>
+              Looks up a localized string similar to Run script tool in process.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolParametersLabel">
+            <summary>
+              Looks up a localized string similar to Define the script tool parameters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.scriptToolReadingDatatypesError">
+            <summary>
+              Looks up a localized string similar to Reading datatypes has failed..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.scriptToolReadingEnvError">
+            <summary>
+              Looks up a localized string similar to Reading environments has failed..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolSchemaParamHeader">
+            <summary>
+              Looks up a localized string similar to Schema.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolSymbologyParamHeader">
+            <summary>
+              Looks up a localized string similar to Symbology.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolTypeParamHeader">
+            <summary>
+              Looks up a localized string similar to Type.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolValidationEditWithIDE">
+            <summary>
+              Looks up a localized string similar to Open in Script Editor.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ScriptToolValidationEditWithIDE_TT">
+            <summary>
+              Looks up a localized string similar to You can edit the ToolValidator script in the box above, or open it in your preferred IDE by first setting the Script Editor Geoprocessing option..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.searchDialogOpenTool">
+            <summary>
+              Looks up a localized string similar to Open.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.searchDialogRemove">
+            <summary>
+              Looks up a localized string similar to Remove from Favorites.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.searchPageButton">
+            <summary>
+              Looks up a localized string similar to All Tools.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SearchSeparator_result">
+            <summary>
+              Looks up a localized string similar to Search Results for &quot;{0}&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SearchSeparatorFormat">
+            <summary>
+              Looks up a localized string similar to Search Results ({0}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SelectLayerFileTitle">
+            <summary>
+              Looks up a localized string similar to Select a layer file (lyrx) to use for symbology..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SelectSchemaTitle">
+            <summary>
+              Looks up a localized string similar to Select schema source.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SelectScriptFile">
+            <summary>
+              Looks up a localized string similar to Select the script file..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.SetPasswordDialogTitle">
+            <summary>
+              Looks up a localized string similar to Set Password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.System_Tools">
+            <summary>
+              Looks up a localized string similar to Toolboxes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.systemtoolsDialogPin">
+            <summary>
+              Looks up a localized string similar to Add to Favorites.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableDeleteField">
+            <summary>
+              Looks up a localized string similar to Delete Field.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableDeleteFieldVerify">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete the selected field: [{0}]?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableDeleteRequiredFieldErrorFmt">
+            <summary>
+              Looks up a localized string similar to [{0}] is required and cannot be deleted..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableDeleteSubtypeFieldErrorFmt">
+            <summary>
+              Looks up a localized string similar to [{0}] corresponds to a subtype field and cannot be deleted..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableRemoveAllJoins">
+            <summary>
+              Looks up a localized string similar to Remove Joins.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableRemoveAllJoinsVerify">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to remove all joins?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableRemoveAllRelates">
+            <summary>
+              Looks up a localized string similar to Remove Relates.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.TableRemoveAllRelatesVerify">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to remove all relates?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.Tool_PropSheet_Title">
+            <summary>
+              Looks up a localized string similar to {0} Tool: {1}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.tool_search_ignore">
+            <summary>
+              Looks up a localized string similar to by,of,to,the,as.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxAlreadyExists">
+            <summary>
+              Looks up a localized string similar to The toolbox already exists..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxChangeAliasError">
+            <summary>
+              Looks up a localized string similar to Could not change the toolbox alias..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxChangeDescriptionError">
+            <summary>
+              Looks up a localized string similar to Could not change the toolbox description..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxChangeLabelError">
+            <summary>
+              Looks up a localized string similar to Could not change the toolbox label..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxChangeNameError">
+            <summary>
+              Looks up a localized string similar to Could not change the toolbox name..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxGeneralAliasError">
+            <summary>
+              Looks up a localized string similar to The alias can only consist of letters and numbers..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxGeneralAliasErrorCaption">
+            <summary>
+              Looks up a localized string similar to Alias has invalid characters..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxGeneralErrorCaption">
+            <summary>
+              Looks up a localized string similar to Could not change toolbox properties..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxGeneralNameError">
+            <summary>
+              Looks up a localized string similar to Toolbox name can&apos;t contain the following characters  \ / : * ? &quot; &lt; &gt; |.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxGeneralNameErrorCaption">
+            <summary>
+              Looks up a localized string similar to Toolbox name has invalid characters..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxPropertiesViewAlias">
+            <summary>
+              Looks up a localized string similar to Alias:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxPropertiesViewDescription">
+            <summary>
+              Looks up a localized string similar to Description:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxPropertiesViewLabel">
+            <summary>
+              Looks up a localized string similar to Label:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolboxPropertiesViewName">
+            <summary>
+              Looks up a localized string similar to Name:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolboxSaveAs100">
+            <summary>
+              Looks up a localized string similar to Save this toolbox in ArcGIS 10.0 format..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolboxSaveAs102">
+            <summary>
+              Looks up a localized string similar to Save this toolbox in ArcGIS 10.1/10.2 format..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolboxSaveAs103">
+            <summary>
+              Looks up a localized string similar to Save this toolbox in ArcGIS 10.3 format..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolboxSaveAs93">
+            <summary>
+              Looks up a localized string similar to Save this toolbox in ArcGIS 9.3. format..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolboxSaveAsError">
+            <summary>
+              Looks up a localized string similar to Could not save the toolbox to an earlier version..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_AddToQueueMessage">
+            <summary>
+              Looks up a localized string similar to Adding to the Queue....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_EnvironmentsTab">
+            <summary>
+              Looks up a localized string similar to Environments.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_MissingMSG">
+            <summary>
+              Looks up a localized string similar to Parameter are missing or invalid.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_MissingMSG2">
+            <summary>
+              Looks up a localized string similar to {0} Parameters are missing or invalid.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_NoEnv">
+            <summary>
+              Looks up a localized string similar to No Environments.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_NoParam">
+            <summary>
+              Looks up a localized string similar to No Parameters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_open_failed">
+            <summary>
+              Looks up a localized string similar to Tool has failed to open: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialog_ParametersTab">
+            <summary>
+              Looks up a localized string similar to Parameters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialogButton_Run">
+            <summary>
+              Looks up a localized string similar to Run.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolDialogButton_Run_TT">
+            <summary>
+              Looks up a localized string similar to Execute Tool.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneral_ModelEdit_TextInfo">
+            <summary>
+              Looks up a localized string similar to Current Model property changes will be applied upon save..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralEmbedded">
+            <summary>
+              Looks up a localized string similar to ... embedded ....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralLabelLabel">
+            <summary>
+              Looks up a localized string similar to Label.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralMessage_ScriptEmpty">
+            <summary>
+              Looks up a localized string similar to Script file cannot be empty.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralNameError">
+            <summary>
+              Looks up a localized string similar to The name can only consist of letters and numbers, spaces, under scores and special characters are not allowed..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralNameExistsError">
+            <summary>
+              Looks up a localized string similar to The tool name already exists in the toolbox..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralNameLabel">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralOptionsLabel">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralPasswordLabel">
+            <summary>
+              Looks up a localized string similar to Set password.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralRelativePathLabel">
+            <summary>
+              Looks up a localized string similar to Store tool with relative path.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolGeneralToolsetLabel">
+            <summary>
+              Looks up a localized string similar to Toolset.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolHistory_CopyAll">
+            <summary>
+              Looks up a localized string similar to Copy All.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolHistory_Environments">
+            <summary>
+              Looks up a localized string similar to Environments.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolHistory_Messages">
+            <summary>
+              Looks up a localized string similar to Messages.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolHistory_popout_TT">
+            <summary>
+              Looks up a localized string similar to Pop Out.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolMultiValueParamHeader">
+            <summary>
+              Looks up a localized string similar to MultiValue.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolParametersView_Direction_IN">
+            <summary>
+              Looks up a localized string similar to Input.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolParametersView_Direction_OUT">
+            <summary>
+              Looks up a localized string similar to Output.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolParametersView_ParamType_0">
+            <summary>
+              Looks up a localized string similar to Required.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolParametersView_ParamType_1">
+            <summary>
+              Looks up a localized string similar to Optional.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolParametersView_ParamType_2">
+            <summary>
+              Looks up a localized string similar to Derived.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.toolReadError">
+            <summary>
+              Looks up a localized string similar to Reading tool {0} has failed.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolTypeLabelModel">
+            <summary>
+              Looks up a localized string similar to Model.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolTypeLabelPythonToolboxTool">
+            <summary>
+              Looks up a localized string similar to Python Toolbox.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.ToolTypeLabelScript">
+            <summary>
+              Looks up a localized string similar to Script.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.LocalResources.GpResources.VariableDataType">
+            <summary>
+              Looks up a localized string similar to Variable Data Type.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.execute_helper.eval(ArcGIS.Desktop.DesktopService.IGPToolProcessor,System.Threading.CancellationToken,ArcGIS.Desktop.Core.Geoprocessing.GPToolExecuteEventHandler,ArcGIS.Desktop.GeoProcessing.execute_helper.ExecuteFlags,System.Func{System.String,System.Int32})">
+            ToolDialog version
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.StringDistance.DLD(System.String,System.String,System.Int32)">
+            <summary>
+            Computes the Damerau-Levenshtein Distance between two strings, represented as arrays of
+            integers, where each integer represents the code point of a character in the source string.
+            Includes an optional threshhold which can be used to indicate the maximum allowable distance.
+            </summary>
+            <param name="source">An array of the code points of the first string</param>
+            <param name="target">An array of the code points of the second string</param>
+            <param name="threshold">Maximum allowable distance</param>
+            <returns>Int.MaxValue if threshhold exceeded; otherwise the Damerau-Leveshteim distance between the strings</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ToolboxUtil.LoadToolboxAsync(System.String)">
+            <summary>
+            return sorted by name hierarchical collection of ToolInfoViewModel items
+            </summary>
+            <param name="toolbox_path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.toolHistoryData">
+            <summary>
+            toolHistoryData - share the same XML as GPResult
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.toolHistoryData.id">
+            <summary>
+            return unique identifier
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Internal.GeoProcessing.SearchTools.getAsync(System.String)">
+            <summary>
+            get TooInfo from system and project items
+            </summary>
+            <param name="tool_name">= @path\tool | tool_alias | alias.tool </param>
+            <returns></returns>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.c2t">
+            <summary>
+            convert string to property
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ToolDialogPageViewModel">
+            <summary>
+            /////////////
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.ToolDialogPageViewModel.IsValid">
+            <summary>
+            return true when all parameter is valid
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.LogWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.GPMessageBoxView">
+            <summary>
+            Interaction logic for GPMessageBoxView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.GPMessageBoxView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ModelBuilderPaneView">
+            <summary>
+            Interaction logic for SystemToolsView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ModelBuilderPaneView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.DataTypesView">
+            <summary>
+            Interaction logic for DataTypesView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.DataTypesView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.EnvironmentsView">
+            <summary>
+            Interaction logic for EnvironmentsView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.EnvironmentsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.GalleryCustomizeView">
+            <summary>
+            Interaction logic for GalleryCustomizeView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.GalleryCustomizeView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ModelBuilderToolDialog">
+            <summary>
+            Interaction logic for ModelBuilderToolDialog.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ModelBuilderToolDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.PythonWindowView">
+            <summary>
+            Interaction logic for PythonWindowView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.PythonWindowView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ScriptToolValidationView">
+            <summary>
+            Interaction logic for ScriptToolValidationView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ScriptToolValidationView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.SearchToolsView">
+            <summary>
+            Interaction logic for SearchToolsView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.SearchToolsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ToolboxPropertiesView">
+            <summary>
+            Interaction logic for GenericPropertiesView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ToolboxPropertiesView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.DomainView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Internal.GeoProcessing.PythonToolboxErrorsView">
+            <summary>
+            Interaction logic for PythonToolboxErrorsView.xaml
+            </summary>
+            <summary>
+            PythonToolboxErrorsView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Internal.GeoProcessing.PythonToolboxErrorsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.HistoryProjectItem">
+            <summary>
+            Represents a GeoProcessing history project item.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.ToolInfo.Name">
+            <summary>
+            Display Name
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.ToolInfo.ToolType">
+            <summary>
+            return ["function", "model", "script", "custom", "server", "pythonscript", "task","toolbox", "toolset"]
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.ToolInfo.ToolBoxName">
+            <summary>
+            display toolbox name
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.ToolInfo.executable">
+            <summary>
+            true if tool, false - toolbox, toolset
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.ToolInfo.toolName">
+            <summary>
+            real name
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.GeoprocessingModule.Current">
+            <summary>
+            singleton instance
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.GPOptionsView">
+            <summary>
+            Interaction logic for GPOptionsView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.GPOptionsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.MainPageView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.GPDocPaneView">
+            <summary>
+            Interaction logic for SystemToolsView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.GPDocPaneView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.ToolDialogPage">
+            <summary>
+            Interaction logic for ToolPage.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.GeoProcessing.ToolDialogPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.GeoProcessing.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.Add">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.DeleteFailed">
+            <summary>
+              Looks up a localized string similar to Delete Failed.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.EnvironmentViewCancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.EnvironmentViewOk">
+            <summary>
+              Looks up a localized string similar to OK.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.NewPythonToolboxTitle">
+            <summary>
+              Looks up a localized string similar to New Python Toolbox.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.NewToolboxTitle">
+            <summary>
+              Looks up a localized string similar to New Toolbox.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.Optional">
+            <summary>
+              Looks up a localized string similar to Optional.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.ProjectItemToolboxDescription">
+            <summary>
+              Looks up a localized string similar to Geoprocessing Toolbox.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.ProjectItemToolsCategory">
+            <summary>
+              Looks up a localized string similar to Tools.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.Required">
+            <summary>
+              Looks up a localized string similar to Required.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.GeoProcessing.Properties.Resources.SelectToolboxTitle">
+            <summary>
+              Looks up a localized string similar to Select Toolbox.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

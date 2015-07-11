@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--//Copyright 2015 Esri
+
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+
+
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+-->
+<ArcGIS defaultAssembly="ESRI_UC_2015.dll" defaultNamespace="ConstructingGeometries" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{29AD53A1-481B-4E90-AA4B-F13FA586022B}" version="1.0" desktopVersion="1.1.2877">
+    <Name>ESRI UC 2015</Name>
+    <Description> </Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>ArcGIS Pro SDK</Author>
+    <Company>Esri</Company>
+    <Date>2/16/2015 11:21:52 AM, 2015</Date>
+    <Subject>Electric Tracing / Designer Express Commisioning Tool</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="ConstructingGeometries_Module" className="ConstructingGeometriesModule" autoLoad="false" caption="Module for the Core.Geometry and Core.Data API samples.">
+      <tabs>
+        <tab id="ConstructingGeoemetries_Tab1" caption="ArcFM">
+          <group refID="ConstructingGeometries_Group" />
+          <group refID="ConstructingGeometries_Group1" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="ConstructingGeometries_Group" caption="Tracing" appearsOnAddInTab="false">
+          <!-- host controls within groups -->
+          <tool refID="ConstructingGeometries_Upstream" size="large" />
+          <tool refID="ConstructingGeometries_Downstream" size="large" />
+          <tool refID="ConstructingGeometries_Circuit" size="large" />
+          <tool refID="ConstructingGeometries_Images_UpstreamProt" size="large" />
+          <tool refID="ConstructingGeometries_Images_DownstreamProt" size="large" />
+          <button refID="ConstructingGeometries_Erase" size="large" />
+          <button refID="ConstructingGeometries_Analyze_ShowButton" size="large" />
+          <button refID="ConstructingGeometries_Dockpane1_ShowButton" size="large" />
+          <!--<button refID="ConstructingGeometries_DxCommision_ShowButton" size="large" />-->
+        </group>
+        <group id="ConstructingGeometries_Group1" caption="Designer Express" appearsOnAddInTab="false">
+          <button refID="ConstructingGeometries_DxCommision_ShowButton" size="large" />
+          <button refID="ConstructingGeometries_NextUpstreamProt" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <tool id="ConstructingGeometries_Upstream" caption="Upstream" className="Upstream" loadOnClick="true" smallImage="Images\Upstream.png" largeImage="Images\Upstream.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            ArcFM Upstream Trace<disabledText /></tooltip>
+        </tool>
+        <tool id="ConstructingGeometries_Downstream" caption="Downstream" className="Downstream" loadOnClick="true" smallImage="Images\Downstream.png" largeImage="Images\Downstream.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            ArcFM Downstream Trace<disabledText /></tooltip>
+        </tool>
+        <tool id="ConstructingGeometries_Circuit" caption="Circuit " className="Circuit" loadOnClick="true" smallImage="Images\Circuit.png" largeImage="Images\Circuit.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            Circuit Trace<disabledText /></tooltip>
+        </tool>
+        <tool id="ConstructingGeometries_Images_UpstreamProt" caption="Upstream Protective" className="UpstreamProt" loadOnClick="true" smallImage="Images\UpstreamProt.png" largeImage="Images\UpstreamProt.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            Upstream Protective Device Trace<disabledText /></tooltip>
+        </tool>
+        <tool id="ConstructingGeometries_Images_DownstreamProt" caption="Downstream Protective" className="DownstreamProt" loadOnClick="true" smallImage="Images\DownstreamProt.png" largeImage="Images\DownstreamProt.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            Downstream Protective Device Trace<disabledText /></tooltip>
+        </tool>
+        <button id="ConstructingGeometries_NextUpstreamProt" caption="Refresh Version" className="NextUpstreamProt" loadOnClick="true" smallImage="Images\NextUpstreamProt.png" largeImage="Images\NextUpstreamProt.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            Next Upstream Protective Device Trace<disabledText /></tooltip>
+        </button>
+        <button id="ConstructingGeometries_Erase" caption="Erase Results" className="Erase" loadOnClick="true" smallImage="Images\Erase.png" largeImage="Images\Erase.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">
+            Erase Trace Results<disabledText /></tooltip>
+        </button>
+        <button id="ConstructingGeometries_Analyze_ShowButton" caption="Trace Results" className="Analyze_ShowButton" loadOnClick="true" smallImage="Images\Analyze.png" largeImage="Images\Analyze.png">
+          <tooltip heading="Show Dockpane">
+            Show Trace Results pane<disabledText /></tooltip>
+        </button>
+        <!--<button id="ConstructingGeometries_Commision" caption="Commision Dx Edits" className="Commision" loadOnClick="true" smallImage="Images\Comission.png" largeImage="Images\Comission.png" condition="esri_mapping_mapPane">
+          <tooltip heading="ArcFM Solution">Commision Designer Express Edits<disabledText /></tooltip>
+        </button>-->
+        <button id="ConstructingGeometries_Analyze_MenuButton1" caption="Phase by kVA" className="Analyze_MenuButton1" loadOnClick="true" smallImage="Images\KVA.png" largeImage="Images\Analyze.png">
+          <tooltip heading="ArcFM Solution">Phase by kVA<disabledText /></tooltip>
+        </button>
+        <button id="ConstructingGeometries_Analyze_MenuButton2" caption="Phase by Length" className="Analyze_MenuButton2" loadOnClick="true" smallImage="Images\Ruler.png" largeImage="Images\Analyze.png">
+          <tooltip heading="ArcFM Solution">
+            Phase by Length<disabledText /></tooltip>
+        </button>
+        <button id="ConstructingGeometries_Analyze_MenuButton3" caption="Phase by Customer" className="Analyze_MenuButton3" loadOnClick="true" smallImage="Images\Customers.png" largeImage="Images\Analyze.png">
+          <tooltip heading="ArcFM Solution">
+            Phase by Customer<disabledText /></tooltip>
+        </button>
+        <!--<button id="ConstructingGeometries_Dockpane1_ShowButton" caption="Show Dockpane 1" className="Dockpane1_ShowButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
+          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
+        </button>-->
+        <button id="ConstructingGeometries_Dockpane1_MenuButton" caption="Burger Menu Button" className="Dockpane1_MenuButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
+          <tooltip heading="Burger Menu Button">ToolTip<disabledText /></tooltip>
+        </button>
+        
+        <button id="ConstructingGeometries_DxCommision_ShowButton" caption="Show DxCommision " className="DxCommision_ShowButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\Comission.png">
+          <tooltip heading="Show Dockpane">
+            Commision Designer Express Edits<disabledText /></tooltip>
+        </button>
+      </controls>
+      <dockPanes>
+        <dockPane id="ConstructingGeometries_Analyze" caption="Analyze Trace Results" className="AnalyzeViewModel" keytip="DockPane" initiallyVisible="true" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="AnalyzeView" />
+        </dockPane>
+        <!--<dockPane id="ConstructingGeometries_Dockpane1" caption="Dockpane 1" className="Dockpane1ViewModel" keytip="DockPane" initiallyVisible="true" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="Dockpane1View" />
+        </dockPane>-->
+        <dockPane id="ConstructingGeometries_DxCommision" caption="Designer Express Commision Tool" className="DxCommisionViewModel" keytip="DockPane" initiallyVisible="true" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="DxCommisionView" />
+        </dockPane>
+      </dockPanes>
+      <menus>
+        <menu id="ConstructingGeometries_Analyze_Menu" caption="Options" contextMenu="true">
+          <button refID="ConstructingGeometries_Analyze_MenuButton1" />
+          <button refID="ConstructingGeometries_Analyze_MenuButton2" />
+          <button refID="ConstructingGeometries_Analyze_MenuButton3" />
+        </menu>
+        <menu id="ConstructingGeometries_Dockpane1_Menu" caption="Options" contextMenu="true">
+          <button refID="ConstructingGeometries_Dockpane1_MenuButton" />
+        </menu>
+      </menus>
+    </insertModule>
+  </modules>
+  <conditions>
+    <insertCondition id="environment_ready_for_sample" caption="Pre-requisites to run the sample are met.">
+      <and>
+        <state id="layers_exists" />
+        <state id="esri_mapping_mapPane" />
+      </and>
+    </insertCondition>
+    <insertCondition id="geometry_points_constructed_condition" caption="Sample points construction completed and map view visible.">
+      <and>
+        <state id="geometry_points_constructed" />
+        <state id="esri_mapping_mapPane" />
+      </and>
+    </insertCondition>
+    <insertCondition id="geometry_lines_constructed_condition" caption="Sample line construction completed and map view visible.">
+      <and>
+        <state id="geometry_lines_constructed" />
+        <state id="esri_mapping_mapPane" />
+      </and>
+    </insertCondition>
+  </conditions>
+</ArcGIS>

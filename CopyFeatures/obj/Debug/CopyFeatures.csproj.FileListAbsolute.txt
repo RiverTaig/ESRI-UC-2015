@@ -1,0 +1,6 @@
+C:\Code\CopyFeatures\bin\Debug\CopyFeatures.exe.config
+C:\Code\CopyFeatures\obj\Debug\CopyFeatures.csprojResolveAssemblyReference.cache
+C:\Code\CopyFeatures\bin\Debug\CopyFeatures.exe
+C:\Code\CopyFeatures\bin\Debug\CopyFeatures.pdb
+C:\Code\CopyFeatures\obj\Debug\CopyFeatures.exe
+C:\Code\CopyFeatures\obj\Debug\CopyFeatures.pdb
