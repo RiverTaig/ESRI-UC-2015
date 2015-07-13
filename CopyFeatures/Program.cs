@@ -11,6 +11,7 @@ namespace CopyFeatures
 {
     class Program
     {
+        public static string commissionProgress = @"C:\temp\commissionProgress.arcgispro";
         public static string GetConfiguration(string config)
         {
             string[] lines = File.ReadAllLines(@"c:\temp\esri_uc_2015.config");
@@ -23,7 +24,7 @@ namespace CopyFeatures
         }
         static void Main(string[] args)
         {
-            string commissionProgress = @"C:\temp\commissionProgress.arcgispro";
+
             File.WriteAllText(commissionProgress, "Starting at " + DateTime.Now.ToString());
             Console.WriteLine("Starting at " + DateTime.Now.ToString());
 
@@ -49,6 +50,9 @@ namespace CopyFeatures
                     return;
                 }
                 File.WriteAllText(commissionProgress, "Got workspace at " + DateTime.Now.ToString());
+                ((IVersion)fws).RefreshVersion();
+                File.WriteAllText(commissionProgress, "Refreshed the version at " + DateTime.Now.ToString());
+                Console.WriteLine("Refreshed the version at " + DateTime.Now.ToString());
                 Console.WriteLine("Got workspace at " + DateTime.Now.ToString());
                 wse = fws as IWorkspaceEdit ;
                 wse.StartEditing(false);
@@ -67,7 +71,7 @@ namespace CopyFeatures
                 //Console.ReadLine();
                 //return;
 
-                var lines = File.ReadAllLines(GetConfiguration("CommisionedDesign"));
+                /*var lines = File.ReadAllLines(GetConfiguration("CommisionedDesign"));
                 string lastLayerName = "";
                 Dictionary<string, List<int>> layerToOIDS = new Dictionary<string, List<int>>();
                 foreach (string line in lines)
@@ -82,10 +86,11 @@ namespace CopyFeatures
                     {
                         layerToOIDS[lastLayerName].Add(Convert.ToInt32(line));
                     }
-                }
+                }*/
                 Console.WriteLine("Opening feature classes: " + DateTime.Now.ToString());
                 File.WriteAllText(commissionProgress, "Opening feature classes: " + DateTime.Now.ToString());
                 Dictionary<string, IFeatureClass> layerNamesToFeatureClasses = new Dictionary<string, IFeatureClass>();
+                #region open feature classes
                 List<string> dxClassNames = new List<string>{
                     "DxBusbar","DxCabinetStructure","DxCapacitorBank","DxDownGuy",
                     "DxDynamicProtectiveDevice","DxFuse","DxGenerator","DxLight",
@@ -102,7 +107,9 @@ namespace CopyFeatures
                     IFeatureClass correspondingFC = fws.OpenFeatureClass(correspondingClass);
                     layerNamesToFeatureClasses.Add(correspondingClass, correspondingFC);
                 }
+                #endregion
 
+                //WriteGeometry(layerNamesToFeatureClasses);
 
                 //Now that we have opened the workspace, a table, and gotten the license, we spin and wait for the file to alert us that we are ready to proced
                 string requestOriginal = File.ReadAllText(GetConfiguration("RequestCommission"));
@@ -117,6 +124,24 @@ namespace CopyFeatures
                     }
                 }
 
+                var lines = File.ReadAllLines(GetConfiguration("CommisionedDesign"));
+                string lastLayerName = "";
+                Dictionary<string, List<int>> layerToOIDS = new Dictionary<string, List<int>>();
+                foreach (string line in lines)
+                {
+                    int oid = -1;
+                    if (int.TryParse(line, out oid) == false)
+                    {
+                        layerToOIDS.Add(line, new List<int>());
+                        lastLayerName = line;
+                    }
+                    else
+                    {
+                        layerToOIDS[lastLayerName].Add(Convert.ToInt32(line));
+                    }
+                }
+
+
                 Console.WriteLine("Starting to commission at: " + DateTime.Now.ToString());
                 File.WriteAllText(commissionProgress, "Starting to commission at: " + DateTime.Now.ToString());
 
@@ -128,8 +153,20 @@ namespace CopyFeatures
                     foreach (int oid in kvp.Value)
                     {
                         IFeature newFeature = target.CreateFeature();
-                        newlyCreatedFeatures.Add(newFeature);
-                        IFeature sourceFeature = source.GetFeature(oid);
+                        
+                        IFeature sourceFeature = null;
+                        try
+                        {
+                            sourceFeature = source.GetFeature(oid);
+                        }
+                        catch {
+                            if (sourceFeature == null)
+                            {
+                                File.WriteAllText(commissionProgress, "Source feature is null " + DateTime.Now.ToString());
+                                continue;
+                            }
+                        }
+                        #region Looop through fields setting values on new features
                         for (int i = 0; i < source.Fields.FieldCount; i++)
                         {
                             try {
@@ -142,9 +179,10 @@ namespace CopyFeatures
                             }
                             catch { }
                         }
-
+                        #endregion
                         try
                         {
+                            #region if we haven't found  a phase
                             if (!foundTapPhase)
                             {
                                 List<IPoint> points = new List<IPoint>();
@@ -163,6 +201,7 @@ namespace CopyFeatures
                                     IEnumFeature enFes = (newFeature as INetworkFeature).GeometricNetwork.SearchForNetworkFeature(pnt, esriFeatureType.esriFTComplexEdge);
                                     enFes.Reset();
                                     IFeature fe = enFes.Next();
+                                    #region loop through connected features
                                     while (fe != null)
                                     {
                                         object pd = fe.get_Value(fe.Fields.FindField("PHASEDESIGNATION"));
@@ -199,8 +238,10 @@ namespace CopyFeatures
                                         }
                                         fe = enFes.Next();
                                     }
+                                    #endregion
                                 }
                             }
+                            #endregion
                         }
                         catch (Exception ex)
                         {
@@ -208,17 +249,23 @@ namespace CopyFeatures
                         }
 
                         newFeature.Store();
+                        newlyCreatedFeatures.Add(newFeature);
                         int objectClassID = sourceFeature.Class.ObjectClassID;
                         int featureOID = sourceFeature.OID;
                         IQueryFilter qf = new QueryFilterClass();
                         qf.WhereClause = "FEATURECLASSID = " + objectClassID + " AND FEATUREOID = " + featureOID;
                         ICursor expressCur = express_feature_table.Search(qf, false);
                         IRow expressFeRow = expressCur.NextRow();
-                        expressFeRow.Delete();
-                        //sourceFeature.Delete();
-                        Console.WriteLine("Created one new feature and deleted a row from express_features table: " + DateTime.Now.ToString());
-                        counter++;
-                        File.WriteAllText(commissionProgress, "Created feature #" + counter + " and deleted corresponding row from express_features table: " + DateTime.Now.ToString());
+                        try
+                        {
+                            expressFeRow.Delete();
+                            //sourceFeature.Delete();
+                            Console.WriteLine("Created one new feature and deleted a row from express_features table: " + DateTime.Now.ToString());
+                            counter++;
+                            File.WriteAllText(commissionProgress, "Created feature #" + counter + " and deleted corresponding row from express_features table: " + DateTime.Now.ToString());
+                        }
+                        catch { //Swallow errors where we can't delete features in express features table.
+                        }
                     }
                 }
 
@@ -259,9 +306,56 @@ namespace CopyFeatures
                 Console.WriteLine("Released licenses at: " + DateTime.Now.ToString());
                 File.WriteAllText(commissionProgress, "Released licenses at: " + DateTime.Now.ToString());
                 File.WriteAllText(commissionProgress, "Commissioning complete at: " + DateTime.Now.ToString());
+                File.WriteAllText(GetConfiguration("TimeDone") , DateTime.Now.ToString());
+
                 Console.ReadLine();
-                
             }
+        }
+
+        private static void WriteGeometry(Dictionary<string, IFeatureClass> layerNamesToFeatureClasses)
+        {
+            File.Delete(@"C:\temp\geometry.txt");
+            var lines = File.ReadAllLines(GetConfiguration("DesignTxt"));
+            string lastLayerName = "";
+            Dictionary<string, List<int>> layerToOIDS = new Dictionary<string, List<int>>();
+            foreach (string line in lines)
+            {
+                int oid = -1;
+                if (int.TryParse(line, out oid) == false)
+                {
+                    layerToOIDS.Add(line, new List<int>());
+                    lastLayerName = line;
+                }
+                else
+                {
+                    layerToOIDS[lastLayerName].Add(Convert.ToInt32(line));
+                }
+            }
+            double xMin = double.MaxValue; double xMax = double.MinValue; double yMin = double.MaxValue; double yMax = double.MinValue;
+            foreach (KeyValuePair<string, List<int>> kvp in layerToOIDS)
+            {
+                IFeatureClass source = layerNamesToFeatureClasses[kvp.Key];  //fws.OpenFeatureClass(kvp.Key);
+                foreach (int oid in kvp.Value)
+                {
+                    IFeature sourceFeature = null;
+                    try
+                    {
+                        sourceFeature = source.GetFeature(oid);
+                        IEnvelope env = sourceFeature.Shape.Envelope;
+                        if (env.XMin < xMin) { xMin = env.XMin; }
+                        if (env.YMin < yMin) { yMin = env.YMin; }
+                        if (env.XMax > xMax) { xMax = env.XMax; }
+                        if (env.YMax > yMax) { yMax = env.YMax; }
+                    }
+                    catch { }
+                }
+            }
+            string envString = xMin.ToString() + "," + yMin.ToString() + "," + xMax.ToString() + "," + yMax.ToString();
+            File.WriteAllText(@"C:\temp\geometry.txt",envString );
+            string updateString = "Just wrote to geometry txt: " + envString + " at " + DateTime.Now.ToString();
+            Console.WriteLine(updateString);
+            File.WriteAllText(commissionProgress, DateTime.Now.ToString());
+
         }
     }
 }
