@@ -38,7 +38,9 @@ namespace ConstructingGeometries
                 //this.txtProgress.Text = info;
                 this.Dispatcher.Invoke((Action)(() =>
                     {
-                        txtProgress.Text = info;
+
+                            txtProgress.Text = info;
+                        
                     }));
             }
             catch (Exception ex)

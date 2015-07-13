@@ -47,7 +47,8 @@ namespace ConstructingGeometries
                 Common.MakeTraceResultsFromJson(json );
                 
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            { }
         }
 
 

@@ -20,12 +20,13 @@ namespace ConstructingGeometries
             try
             {
 
-                /*
+                
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(Common.GetConfiguration("CopyFeaturesExe"));
                 startInfo.Arguments = "VersionRefresh";
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Minimized;
-                System.Diagnostics.Process.Start(startInfo);*/
+                System.Diagnostics.Process.Start(startInfo);
 
+                /*
                 QueuedTask.Run(() =>
                 {
                     //var edOp = new EditOperation();
@@ -43,10 +44,10 @@ namespace ConstructingGeometries
                        // var ec = edOp as EditOperation.IEditContext;
                     
                         //.invalidate(t);
-                        /*var w = t.GetWorkspace();
+                        var w = t.GetWorkspace();
                         w.GetVersionManager().GetCurrentVersion().Connect();
                         var v = w.GetVersionManager().GetCurrentVersion();
-                        v.Refresh();*/
+                        v.Refresh();
 
                     }
                     //var env = MapView.Active.GetExtentAsync().Result;
@@ -54,6 +55,7 @@ namespace ConstructingGeometries
                     //MapView.Active.ZoomTo(contract);
                     
                 });
+                */
             }
             catch (Exception ex) { 
             

@@ -149,15 +149,17 @@ namespace ConstructingGeometries
             catch (Exception ex) { }
         }
         bool _savedBool = false;
+        
         public async  void SelectFeatures(object obj)
         {
             try
             {
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(Common.GetConfiguration("CopyFeaturesExe"));
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Minimized;
-
                 _uniqueID = System.Diagnostics.Process.Start(startInfo).Id; ;
                 
+                //Wait for the geometry to become available
+
                 //MessageBox.Show("About to select features");
                 await SelectFeaturesInDxLayers();
                 //MessageBox.Show("Done");
@@ -209,11 +211,16 @@ namespace ConstructingGeometries
                 }
             }
 
+            
+
             return QueuedTask.Run(() =>
             {
+                EnvelopeBuilder envBuilder = new EnvelopeBuilder();
+                if (true) { 
+                    #region Get Extent from ArcGIS Pro
                 StreamWriter sw = File.CreateText(Common.GetConfiguration("DesignTxt"));
                 //Determine the extent
-                EnvelopeBuilder envBuilder = new EnvelopeBuilder();
+                //EnvelopeBuilder envBuilder = new EnvelopeBuilder();
                 envBuilder.XMin = 0;
                 envBuilder.XMax = 0;
                 envBuilder.YMin = 0;
@@ -301,6 +308,15 @@ namespace ConstructingGeometries
                 //{
                 //    MessageBox.Show("About to zoom");
                 //}
+
+                #endregion
+                }
+                else
+                {
+                    //Get from ArcObjects
+                }
+
+
                 Map activeMap = MapView.Active.Map;
                 var extent = envBuilder.ToGeometry().Extent;
                 var expandedExtent = extent.Expand(1.2, 1.2, true);
@@ -614,7 +630,7 @@ namespace ConstructingGeometries
                 File.WriteAllText(Common.GetConfiguration("RequestCommission"), DateTime.Now.ToString());
                 MessageBox.Show("Waiting for the design to be commisioned in ArcObjects");
                 bool isReady = false;
-                for (int i = 0; i < 60; i++)
+                for (int i = 0; i < 45; i++)
                 {
                     System.Threading.Thread.Sleep(1000);
                     try

@@ -42,7 +42,7 @@
                 <RowDefinition Height="*"/>
                 <!--Pie or Bar -->
             </Grid.RowDefinitions>
-            <TextBlock x:Name="txtDetailType" Grid.Row="0" Text=" -" HorizontalAlignment="Left" Foreground="Blue"  TextWrapping="Wrap"   VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+            <TextBlock x:Name="txtDetailType" Grid.Row="0" Text=" + " HorizontalAlignment="Left" Foreground="Blue"  TextWrapping="Wrap"   VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
             <ListBox x:Name="lbResults" Grid.Row="1"  HorizontalContentAlignment="Stretch" ItemsSource="{Binding DetailResults}" MouseDoubleClick="lbResults_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate >
